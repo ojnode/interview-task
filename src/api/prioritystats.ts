@@ -4,7 +4,7 @@ import { SampleData } from './types';
 
 const DATA_URL = 'https://sampleapi.squaredup.com/integrations/v1/service-desk?datapoints=500';
 
-// function to calculate percetange of individual types
+// function to calculate percetange of individual priority
 function typePercentage(results: { priority: String}[], priority: string ): number {
     let count = 0;
 

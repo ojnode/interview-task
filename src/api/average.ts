@@ -40,6 +40,6 @@ function findAverage( matchedResults: { created: string; updated: string }[] ) {
 export const GET = async (req: Request, res: Response) => {
     const { data } = await axios.get<SampleData>(DATA_URL)
     const { matchedResults } = highPrioritySolved(data.results, "high", "solved")
-    const averageTime = findAverage(matchedResults)
-    res.json({ averageTime });
+    const averageTimeMins = findAverage(matchedResults)
+    res.json({ averageTimeMins });
 };
